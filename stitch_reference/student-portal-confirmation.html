@@ -1,0 +1,605 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#dae2fd","secondary-fixed-dim":"#ffb77d","status-processing":"#2563EB","surface-dim":"#d2d9f4","primary-fixed-dim":"#95d4ac","surface-container":"#eaedff","on-secondary":"#ffffff","on-background":"#131b2e","on-primary-container":"#84c39b","secondary-container":"#fe932c","surface-container-lowest":"#ffffff","outline":"#707971","on-primary":"#ffffff","on-primary-fixed-variant":"#0f5132","gold-light":"#FEFDF0","on-error":"#ffffff","on-secondary-container":"#663500","primary-fixed":"#b0f1c7","surface-container-high":"#e2e7ff","on-secondary-fixed-variant":"#6e3900","primary":"#003820","surface-canvas":"#F8FAFC","on-tertiary":"#ffffff","inverse-primary":"#95d4ac","inverse-on-surface":"#eef0ff","surface-card":"#FFFFFF","error":"#ba1a1a","tertiary-fixed":"#98f5cf","surface-tint":"#2d6a48","on-error-container":"#93000a","outline-variant":"#c0c9c0","surface-variant":"#dae2fd","tertiary":"#003828","secondary":"#904d00","tertiary-fixed-dim":"#7cd8b4","status-approved":"#059669","on-tertiary-fixed":"#002116","gold-muted":"#F6EFE5","background":"#faf8ff","on-surface-variant":"#404942","on-primary-fixed":"#002111","on-secondary-fixed":"#2f1500","status-rejected":"#DC2626","error-container":"#ffdad6","surface-container-low":"#f2f3ff","on-tertiary-fixed-variant":"#00513b","surface":"#faf8ff","on-surface":"#131b2e","status-pending":"#F59E0B","primary-container":"#0f5132","on-tertiary-container":"#6ac6a3","inverse-surface":"#283044","surface-bright":"#faf8ff","secondary-fixed":"#ffdcc3","tertiary-container":"#00513b","border-subtle":"#E2E8F0"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin":"2rem","space-sm":"0.5rem","space-xl":"2rem","gutter":"1.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1rem","space-lg":"1.5rem"},fontFamily:{"label-sm":["Hanken Grotesk"],"badge-caps":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"display-hero":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"title-md":["Hanken Grotesk"]},fontSize:{"label-sm":["12px",{lineHeight:"16px",fontWeight:"500"}],"badge-caps":["11px",{lineHeight:"14px",letterSpacing:"0.05em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"500"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin text-center font-label-sm text-label-sm flex items-center justify-center gap-space-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>Registrar office hours: Monâ€“Fri, 8:00 AM â€“ 4:00 PM | University Registrar Office: Ground Floor, Main Academic Building</span></div><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><img alt="PLMun University Crest Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZnRLTkqDyuJIUNwlTS9MReDjxHjKfho4XJ9AnC6ixPbJRv1s0CXhB09tCQDQJ7DN24FVdLGJCWl4Ra2PWnouZiwy5r5wpQN9jJ8UizNm8PYr1H053VOGaaH-5bedgm52lX-j6o9U-mvlpe0n8wjHPMtEakrazUffa6xMLYAfXVqvyjWjKGJ60TslV_WzKl64MhBzuDtwEP3h2mdYxKDIKKWXAOwYJBxj-kovoKzmj"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary font-bold tracking-tight">PLMun Registrar Portal</span><span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline">Pamantasan ng Lungsod ng Muntinlupa</span></div></div><div class="hidden xl:flex items-center bg-surface-container rounded-full p-space-xs"><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="landing-page" href="#">Public</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="request-wizard" href="#">Request Wizard</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="student-portal" href="#">Student Portal</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="staff-claim-desk" href="#">Staff Desk</a><a class="px-space-md py-space-xs rounded-full font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="admin-analytics" href="#">Admin & Analytics</a></div><nav class="hidden md:flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="student-portal" href="#">My Requests</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="request-wizard" href="#">Request Document</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="staff-claim-desk" href="#">Staff Claim Desk</a></nav><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-sm pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATCLgu-1beHHZtdaidS4eOq05WtuCR7aAX8XAzV4y6iyGrLir5jaU7GsTuQ47tunO8tSSmtT4aXVP0KtU6GT3puNC2s7uWkMUwewkgXyRArgrb1LXcO0veM0q63mh4H4huAu3byNq-Ba-6dXoxi0qnVqcr4Qx3ZLa6JrC4nlzKPxCEStulfxDWGP7Z90G5CmDtqk4ZFP0hpesGoV5JQZfvQOfU03stnIj9FWga6Iue"/><div class="hidden lg:flex flex-col text-left"><span class="font-label-sm text-label-sm text-on-surface font-semibold leading-tight">Student Services</span><span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Authenticated</span></div></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-280px)]"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-lg"><div class="flex flex-col w-full space-y-space-lg text-on-surface">
+<!-- Header Notice Banner & Action Bar -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="h-10 w-10 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[22px]">badge</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface">Student Portal</span>
+<span class="bg-primary/10 text-primary px-space-xs py-0.5 rounded text-[11px] font-bold tracking-wider uppercase font-badge-caps">Verified SIS Account</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Manage credentials, review appointment vouchers, and track release clearances.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto">
+<a class="bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" data-path="request-wizard" href="#">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>New Document Request</span>
+</a>
+</div>
+</div>
+<!-- Attention Banner: Missed Appointment Alert with Quick Reschedule -->
+<div class="relative overflow-hidden bg-gold-light rounded-xl shadow-sm p-space-lg">
+<div class="absolute left-0 top-0 bottom-0 w-2 bg-status-pending"></div>
+<div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="p-space-sm bg-status-pending/20 text-secondary rounded-lg shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[24px]">event_busy</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-title-md text-title-md text-on-surface font-bold">Action Required: Missed Scheduled Pickup</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-space-xs py-0.5 rounded text-badge-caps font-badge-caps">NO-SHOW NOTICE</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ref: PLM-261015-0842</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs max-w-3xl">
+            You missed your scheduled pickup slot on <strong class="text-on-surface">October 30, 2025 (1:30 PM - 2:00 PM)</strong> for <strong class="text-on-surface">Certificate of Enrollment (COE)</strong>. Your document remains safely printed, verified, and dry-sealed at the University Registrar Holding Cabinet. Please select an available claim window to avoid archiving.
+          </p>
+</div>
+</div>
+<button class="shrink-0 bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-xs transition-transform active:scale-95 shadow-sm" id="openRescheduleBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+<span>Reschedule Pickup Slot</span>
+</button>
+</div>
+</div>
+<!-- Printable Request Confirmation Slip Card -->
+<div class="bg-surface-card rounded-xl shadow-md overflow-hidden" id="confirmationSlip">
+<!-- Slip Decorative Top Banner -->
+<div class="bg-primary text-on-primary px-space-lg py-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-md">
+<div class="p-space-xs bg-surface-card/10 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px] text-primary-fixed">verified</span>
+</div>
+<div>
+<div class="font-badge-caps text-badge-caps text-primary-fixed uppercase tracking-wider">Pamantasan ng Lungsod ng Muntinlupa â€¢ Office of the University Registrar</div>
+<h2 class="font-headline-sm text-headline-sm font-bold text-on-primary leading-tight">Official Document Request Confirmation Slip</h2>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-end md:self-auto bg-surface-card/15 px-space-md py-space-xs rounded-full">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">task_alt</span>
+<span class="font-label-sm text-label-sm text-on-primary">Confirmed & Authenticated</span>
+</div>
+</div>
+<!-- Slip Inner Body -->
+<div class="p-space-lg space-y-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Left: Student and Institution Crest Verification Block -->
+<div class="lg:col-span-8 space-y-space-md">
+<div class="flex items-center gap-space-md bg-surface-container-low p-space-md rounded-lg">
+<div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0 font-bold text-headline-sm shadow-inner">
+              PLM
+            </div>
+<div class="min-w-0">
+<span class="font-badge-caps text-badge-caps text-on-surface-variant uppercase">Authorized Claimant Record</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface truncate">Maria Clara Santos</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Student ID: <span class="font-semibold text-on-surface">2021-04921</span> â€¢ College of Information Technology and Computer Studies (CITCS) â€¢ BS Information Technology
+              </p>
+</div>
+</div>
+<!-- Key Details Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-canvas p-space-md rounded-lg space-y-1">
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Document Requested</span>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Certificate of Grades (COG)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Quantity: 1 Official Copy</span>
+</div>
+<div class="bg-surface-canvas p-space-md rounded-lg space-y-1">
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Declared Purpose</span>
+<div class="font-title-md text-title-md font-semibold text-on-surface">Scholarship Application</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">City Scholarship & Financial Aid</span>
+</div>
+<div class="bg-surface-canvas p-space-md rounded-lg space-y-1">
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Payment Status</span>
+<div class="font-title-md text-title-md font-semibold text-status-approved">PHP 75.00 (PAID)</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Trans: LB-PH-889102-CASHIER</span>
+</div>
+<div class="bg-gold-light p-space-md rounded-lg space-y-1 sm:col-span-2">
+<span class="font-badge-caps text-badge-caps text-secondary uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_clock</span>
+                Confirmed Appointment Slot
+              </span>
+<div class="font-title-md text-title-md font-bold text-on-surface">
+                Thursday, Nov 6, 2025 â€¢ 10:30 AM â€“ 11:00 AM
+              </div>
+<div class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
+<span>Claim Window 3 â€¢ Ground Floor Main Academic Bldg â€¢ Claimant: Self</span>
+</div>
+</div>
+<div class="bg-surface-canvas p-space-md rounded-lg space-y-1">
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Holding Policy</span>
+<div class="font-label-md text-label-md font-semibold text-on-surface">Valid for 30 Calendar Days</div>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Unclaimed slips subject to archive review.</span>
+</div>
+</div>
+</div>
+<!-- Right: Barcode, QR Code & Gate Verification Token -->
+<div class="lg:col-span-4 bg-surface-container-low p-space-lg rounded-xl flex flex-col items-center justify-center text-center space-y-space-md shadow-inner">
+<div class="w-full text-left">
+<span class="font-badge-caps text-badge-caps text-outline uppercase block">Appointment Pass Token</span>
+<span class="font-title-md text-title-md font-bold text-primary tracking-tight">PLM-261031-0001</span>
+</div>
+<!-- Digital QR/Barcode Mockup Box -->
+<div class="bg-surface-card p-space-md rounded-lg shadow-sm flex flex-col items-center justify-center w-full max-w-[240px]">
+<!-- Inline SVG QR Code Matrix -->
+<svg class="w-32 h-32 text-primary" fill="currentColor" viewbox="0 0 100 100">
+<rect fill="currentColor" height="30" rx="3" width="30" x="0" y="0"></rect>
+<rect fill="white" height="20" width="20" x="5" y="5"></rect>
+<rect fill="currentColor" height="10" width="10" x="10" y="10"></rect>
+<rect fill="currentColor" height="30" rx="3" width="30" x="70" y="0"></rect>
+<rect fill="white" height="20" width="20" x="75" y="5"></rect>
+<rect fill="currentColor" height="10" width="10" x="80" y="10"></rect>
+<rect fill="currentColor" height="30" rx="3" width="30" x="0" y="70"></rect>
+<rect fill="white" height="20" width="20" x="5" y="75"></rect>
+<rect fill="currentColor" height="10" width="10" x="10" y="80"></rect>
+<!-- Data Dots -->
+<rect height="6" width="6" x="36" y="8"></rect>
+<rect height="6" width="6" x="46" y="8"></rect>
+<rect height="6" width="6" x="56" y="8"></rect>
+<rect height="6" width="6" x="36" y="20"></rect>
+<rect height="6" width="6" x="46" y="26"></rect>
+<rect height="6" width="6" x="56" y="18"></rect>
+<rect height="6" width="6" x="8" y="38"></rect>
+<rect height="6" width="6" x="18" y="46"></rect>
+<rect height="6" width="6" x="26" y="38"></rect>
+<rect height="6" width="6" x="36" y="38"></rect>
+<rect height="6" width="14" x="46" y="46"></rect>
+<rect height="12" width="6" x="68" y="38"></rect>
+<rect height="6" width="10" x="82" y="46"></rect>
+<rect height="10" width="6" x="38" y="68"></rect>
+<rect height="14" width="6" x="48" y="76"></rect>
+<rect height="6" width="12" x="60" y="68"></rect>
+<rect height="6" width="14" x="78" y="76"></rect>
+<rect height="6" width="6" x="70" y="88"></rect>
+</svg>
+<!-- Barcode Strips -->
+<div class="w-full flex items-center justify-between gap-0.5 mt-3 h-7 bg-surface px-2 py-1 rounded">
+<span class="w-1 h-full bg-on-surface"></span>
+<span class="w-0.5 h-full bg-on-surface"></span>
+<span class="w-1.5 h-full bg-on-surface"></span>
+<span class="w-0.5 h-full bg-on-surface"></span>
+<span class="w-2 h-full bg-on-surface"></span>
+<span class="w-1 h-full bg-on-surface"></span>
+<span class="w-0.5 h-full bg-on-surface"></span>
+<span class="w-1.5 h-full bg-on-surface"></span>
+<span class="w-0.5 h-full bg-on-surface"></span>
+<span class="w-1 h-full bg-on-surface"></span>
+<span class="w-2 h-full bg-on-surface"></span>
+<span class="w-0.5 h-full bg-on-surface"></span>
+<span class="w-1 h-full bg-on-surface"></span>
+<span class="w-1.5 h-full bg-on-surface"></span>
+</div>
+<span class="font-label-sm text-[11px] text-outline mt-1 font-mono tracking-widest">GATEWAY-KEY: 2610310001-A</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-relaxed">
+            Present this QR code or printed voucher at the Registrar Gate Guard and Window 3 Priority Scanner along with your active PLMun Student ID.
+          </p>
+</div>
+</div>
+<!-- Action Buttons Row -->
+<div class="flex flex-wrap items-center justify-end gap-space-sm pt-space-md bg-surface-canvas p-space-md rounded-lg">
+<button class="bg-surface-card hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" onclick="window.print()" type="button">
+<span class="material-symbols-outlined text-[18px]">print</span>
+<span>Print Slip</span>
+</button>
+<a class="bg-surface-card hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" href="https://calendar.google.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">event</span>
+<span>Add to Google Calendar</span>
+</a>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-md py-space-sm rounded-lg flex items-center gap-space-xs transition-colors shadow-sm" id="downloadPdfBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Download Request Slip (PDF)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Detailed Request Status Audit Trail & Lifecycle Tracking -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Timeline Section (5 cols) -->
+<div class="lg:col-span-5 bg-surface-card rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-badge-caps text-badge-caps text-primary uppercase">Verification Progress</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Audit Trail & Remarks</h3>
+</div>
+<span class="bg-status-approved/15 text-status-approved text-badge-caps font-badge-caps px-space-xs py-0.5 rounded uppercase">In Clearance</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Live transaction lifecycle log for request <strong class="text-on-surface">PLM-261031-0001</strong>. Every stage is timestamped by University Registrar personnel.
+      </p>
+<!-- Vertical Timeline -->
+<div class="space-y-space-md relative pl-6 before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-surface-container">
+<!-- Step 1 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 h-5 w-5 rounded-full bg-status-approved text-on-primary flex items-center justify-center text-[12px] shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Request Submitted Online</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 28, 2025 â€¢ 09:14 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Filed via Student SIS Portal. Payment confirmed with receipt number #TXN-77182.</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 h-5 w-5 rounded-full bg-status-approved text-on-primary flex items-center justify-center text-[12px] shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Academic Clearance Verified</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 29, 2025 â€¢ 02:40 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Verified by Evaluator <strong>J. Dela Cruz</strong> (CITCS Records Section). No outstanding grade locks or library accountability.</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 h-5 w-5 rounded-full bg-status-approved text-on-primary flex items-center justify-center text-[12px] shadow-sm">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Printed & Dry-Sealed</span>
+<span class="font-label-sm text-label-sm text-outline">Oct 31, 2025 â€¢ 11:20 AM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Security-paper print completed with official PLMun University dry seal and signed by Registrar Executive.</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative">
+<div class="absolute -left-6 top-1 h-5 w-5 rounded-full bg-primary text-on-primary flex items-center justify-center text-[12px] shadow-sm animate-pulse">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-bold text-primary">Marked Ready for Pickup</span>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Nov 02, 2025 â€¢ 03:00 PM</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">Transferred to Window 3 Release Box. Slotted for claimed appointment window on Nov 6, 2025.</p>
+</div>
+</div>
+<!-- Step 5 (Upcoming) -->
+<div class="relative opacity-60">
+<div class="absolute -left-6 top-1 h-5 w-5 rounded-full bg-surface-container text-on-surface-variant flex items-center justify-center text-[12px]">
+<span class="material-symbols-outlined text-[12px]">radio_button_unchecked</span>
+</div>
+<div class="space-y-0.5">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md font-medium text-on-surface">Claim & Biometric Verification</span>
+<span class="font-label-sm text-label-sm text-outline">Pending Pickup</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Upon presentation of Confirmation Slip, physical ID signature and claim completion log will be recorded.</p>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg text-label-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span>Need an authorized representative? Prepare an Authorization Letter and Valid Gov ID.</span>
+</div>
+</div>
+<!-- Active & Past Requests Table (7 cols) -->
+<div class="lg:col-span-7 bg-surface-card rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<span class="font-badge-caps text-badge-caps text-outline uppercase">Student Records Repository</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">My Active & Past Document Requests</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total: 4 Records</span>
+</div>
+<!-- Badge Legend Bar -->
+<div class="bg-surface-canvas p-space-sm rounded-lg flex flex-wrap items-center gap-space-xs text-badge-caps font-badge-caps">
+<span class="text-outline uppercase text-[10px] mr-1">Status Legend:</span>
+<span class="bg-surface-container text-on-surface-variant px-1.5 py-0.5 rounded">SUBMITTED</span>
+<span class="bg-status-processing/10 text-status-processing px-1.5 py-0.5 rounded">UNDER REVIEW</span>
+<span class="bg-status-pending/20 text-secondary px-1.5 py-0.5 rounded">PROCESSING</span>
+<span class="bg-status-approved/20 text-status-approved px-1.5 py-0.5 rounded">READY FOR PICKUP</span>
+<span class="bg-primary/20 text-primary px-1.5 py-0.5 rounded">CLAIMED</span>
+<span class="bg-status-rejected/15 text-status-rejected px-1.5 py-0.5 rounded">REJECTED</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.5 rounded">NO SHOW</span>
+</div>
+<!-- Requests Data Table (Responsive Stack on Mobile) -->
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-canvas text-outline font-badge-caps text-badge-caps uppercase">
+<th class="py-space-sm px-space-md">Ref Number</th>
+<th class="py-space-sm px-space-md">Document</th>
+<th class="py-space-sm px-space-md">Appointment</th>
+<th class="py-space-sm px-space-md">Status</th>
+<th class="py-space-sm px-space-md text-right">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm">
+<!-- Row 1: Ready For Pickup (Active Slip Above) -->
+<tr class="hover:bg-surface-canvas transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-primary font-mono text-[12px]">PLM-261031-0001</span>
+<span class="block text-[11px] text-outline">Oct 28, 2025</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Certificate of Grades</div>
+<div class="text-[11px] text-on-surface-variant">Qty: 1 â€¢ Scholarship</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="font-medium text-on-surface">Nov 6, 2025</span>
+<span class="block text-[11px] text-on-surface-variant">10:30 AM (Win 3)</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="bg-status-approved/15 text-status-approved font-badge-caps text-[10px] px-2 py-0.5 rounded font-bold uppercase inline-flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-status-approved"></span>
+                  READY FOR PICKUP
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold inline-flex items-center gap-0.5" onclick="document.getElementById('confirmationSlip').scrollIntoView({behavior: 'smooth'})" type="button">
+<span>View Slip</span>
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: No-Show Item (Alert Focus) -->
+<tr class="bg-secondary-fixed/20 hover:bg-secondary-fixed/30 transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-secondary font-mono text-[12px]">PLM-261015-0842</span>
+<span class="block text-[11px] text-outline">Oct 15, 2025</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Certificate of Enrollment</div>
+<div class="text-[11px] text-on-surface-variant">Qty: 1 â€¢ Visa Requirement</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-status-rejected font-medium line-through">Oct 30, 2025</span>
+<span class="block text-[11px] text-secondary font-semibold">Slot Expired</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-badge-caps text-[10px] px-2 py-0.5 rounded font-bold uppercase inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">warning</span>
+                  NO SHOW
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="bg-secondary text-on-secondary hover:bg-secondary/90 px-space-sm py-1 rounded text-label-sm font-label-sm font-medium transition-colors shadow-sm" onclick="document.getElementById('rescheduleModal').classList.remove('hidden')" type="button">
+                  Reschedule
+                </button>
+</td>
+</tr>
+<!-- Row 3: Claimed (Historic) -->
+<tr class="hover:bg-surface-canvas transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-on-surface-variant font-mono text-[12px]">PLM-260812-0419</span>
+<span class="block text-[11px] text-outline">Aug 12, 2025</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Transcript of Records (TOR)</div>
+<div class="text-[11px] text-on-surface-variant">Official Copy â€¢ Employment</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-on-surface">Aug 22, 2025</span>
+<span class="block text-[11px] text-on-surface-variant">Claimed 02:15 PM</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="bg-primary/10 text-primary font-badge-caps text-[10px] px-2 py-0.5 rounded font-bold uppercase inline-flex items-center gap-1">
+<span class="material-symbols-outlined text-[11px]">verified</span>
+                  CLAIMED
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<span class="text-outline font-label-sm text-label-sm">Archived</span>
+</td>
+</tr>
+<!-- Row 4: Processing -->
+<tr class="hover:bg-surface-canvas transition-colors">
+<td class="py-space-md px-space-md">
+<span class="font-semibold text-status-processing font-mono text-[12px]">PLM-261101-0112</span>
+<span class="block text-[11px] text-outline">Nov 01, 2025</span>
+</td>
+<td class="py-space-md px-space-md">
+<div class="font-medium text-on-surface">Good Moral Character</div>
+<div class="text-[11px] text-on-surface-variant">Qty: 2 â€¢ Internship/OJT</div>
+</td>
+<td class="py-space-md px-space-md">
+<span class="text-outline">Tentative: Nov 12</span>
+<span class="block text-[11px] text-outline">Awaiting Slot Assign</span>
+</td>
+<td class="py-space-md px-space-md">
+<span class="bg-status-processing/10 text-status-processing font-badge-caps text-[10px] px-2 py-0.5 rounded font-bold uppercase inline-flex items-center gap-1">
+<span class="h-1.5 w-1.5 rounded-full bg-status-processing animate-ping"></span>
+                  PROCESSING
+                </span>
+</td>
+<td class="py-space-md px-space-md text-right">
+<button class="text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm" type="button">Details</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Quick Guidance & Help Footer -->
+<div class="p-space-md bg-surface-canvas rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-secondary">contact_support</span>
+<span>Questions about fees or document requirements? Check the Citizen's Charter guide.</span>
+</div>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline" href="#">View Guidelines â†’</a>
+</div>
+</div>
+</div>
+<!-- Interactive Reschedule Modal (Popup Dialog) -->
+<div class="hidden fixed inset-0 z-50 flex items-center justify-center p-space-md bg-on-background/40 backdrop-blur-sm" id="rescheduleModal">
+<div class="bg-surface-card rounded-xl shadow-2xl max-w-2xl w-full overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Modal Header -->
+<div class="bg-primary text-on-primary px-space-lg py-space-md flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[24px] text-secondary-fixed">event_repeat</span>
+<div>
+<h3 class="font-title-md text-title-md font-bold text-on-primary">Reschedule Missed Appointment</h3>
+<span class="font-label-sm text-label-sm text-primary-fixed">Ref: PLM-261015-0842 â€¢ Certificate of Enrollment</span>
+</div>
+</div>
+<button class="text-on-primary/80 hover:text-on-primary rounded-full p-1 transition-colors" id="closeRescheduleBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Modal Body -->
+<div class="p-space-lg space-y-space-lg">
+<div class="p-space-sm bg-surface-container-low rounded-lg text-body-sm text-on-surface-variant flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary mt-0.5">verified_user</span>
+<span>Your document is already printed, dry-sealed, and located in <strong>Vault Bin B-14</strong>. No reprint charges apply. Choose your new release slot below.</span>
+</div>
+<!-- Date Picker Segment -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface block">1. Select New Pickup Date (Mon-Fri)</label>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-xs text-center" id="datePickerContainer">
+<button class="date-slot-pill p-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm" type="button">
+<span class="block text-[11px] uppercase font-badge-caps">Mon â€¢ Nov 10</span>
+<span class="font-bold">10 Available</span>
+</button>
+<button class="date-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="block text-[11px] uppercase font-badge-caps">Tue â€¢ Nov 11</span>
+<span class="font-bold">6 Available</span>
+</button>
+<button class="date-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="block text-[11px] uppercase font-badge-caps">Wed â€¢ Nov 12</span>
+<span class="font-bold">14 Available</span>
+</button>
+<button class="date-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors" type="button">
+<span class="block text-[11px] uppercase font-badge-caps">Thu â€¢ Nov 13</span>
+<span class="font-bold">18 Available</span>
+</button>
+</div>
+</div>
+<!-- Time Slot Picker Segment -->
+<div class="space-y-space-xs">
+<label class="font-label-md text-label-md font-semibold text-on-surface block">2. Select Release Window (Window 2 or 3)</label>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-xs text-center" id="timeSlotContainer">
+<button class="time-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              08:30 AM â€“ 09:00 AM
+            </button>
+<button class="time-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              09:30 AM â€“ 10:00 AM
+            </button>
+<button class="time-slot-pill p-space-sm rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm font-semibold" type="button">
+              10:30 AM â€“ 11:00 AM
+            </button>
+<button class="time-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              01:00 PM â€“ 01:30 PM
+            </button>
+<button class="time-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+              02:00 PM â€“ 02:30 PM
+            </button>
+<button class="p-space-sm rounded-lg bg-surface-dim/40 text-outline cursor-not-allowed font-label-sm text-label-sm" disabled="" type="button">
+              03:00 PM (Full)
+            </button>
+</div>
+</div>
+<!-- Appointment Terms Checkbox -->
+<div class="flex items-start gap-space-xs bg-surface-canvas p-space-sm rounded-lg">
+<input checked="" class="mt-1 h-4 w-4 rounded text-primary focus:ring-primary accent-primary" id="rescheduleAcknowledge" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="rescheduleAcknowledge">
+            I confirm that I will claim my Certificate of Enrollment during the selected schedule. I understand that an unclaimed second booking will cause the document to be routed back to the university archives.
+          </label>
+</div>
+</div>
+<!-- Modal Footer -->
+<div class="bg-surface-container-low px-space-lg py-space-md flex items-center justify-end gap-space-sm">
+<button class="bg-surface-card hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-lg transition-colors" id="cancelRescheduleBtn" type="button">
+          Cancel
+        </button>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-label-md text-label-md px-space-lg py-space-sm rounded-lg font-bold flex items-center gap-space-xs transition-transform active:scale-95 shadow-sm" id="confirmRescheduleBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+<span>Confirm Rescheduled Appointment</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Toast Notification for Actions -->
+<div class="hidden fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-space-md py-space-sm rounded-lg shadow-xl flex items-center gap-space-sm animate-in slide-in-from-bottom duration-300" id="toastNotification">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">task_alt</span>
+<span class="font-label-md text-label-md" id="toastMessage">Slip PDF downloaded successfully.</span>
+</div>
+</div>
+<!-- Vanilla Interactive Controller -->
+<script>
+  (function initPortalDashboard() {
+    const rescheduleModal = document.getElementById('rescheduleModal');
+    const openRescheduleBtn = document.getElementById('openRescheduleBtn');
+    const closeRescheduleBtn = document.getElementById('closeRescheduleBtn');
+    const cancelRescheduleBtn = document.getElementById('cancelRescheduleBtn');
+    const confirmRescheduleBtn = document.getElementById('confirmRescheduleBtn');
+    const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+    const toastNotification = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+
+    function showToast(msg) {
+      if (!toastNotification || !toastMessage) return;
+      toastMessage.textContent = msg;
+      toastNotification.classList.remove('hidden');
+      setTimeout(() => {
+        toastNotification.classList.add('hidden');
+      }, 3500);
+    }
+
+    if (openRescheduleBtn && rescheduleModal) {
+      openRescheduleBtn.addEventListener('click', () => {
+        rescheduleModal.classList.remove('hidden');
+      });
+    }
+
+    function closeModal() {
+      if (rescheduleModal) {
+        rescheduleModal.classList.add('hidden');
+      }
+    }
+
+    if (closeRescheduleBtn) closeRescheduleBtn.addEventListener('click', closeModal);
+    if (cancelRescheduleBtn) cancelRescheduleBtn.addEventListener('click', closeModal);
+
+    if (confirmRescheduleBtn) {
+      confirmRescheduleBtn.addEventListener('click', () => {
+        closeModal();
+        showToast('Appointment successfully rescheduled for Monday, Nov 10 (10:30 AM)! An updated claim pass has been sent to your email.');
+      });
+    }
+
+    if (downloadPdfBtn) {
+      downloadPdfBtn.addEventListener('click', () => {
+        showToast('Generating official PLMun Confirmation Slip PDF (PLM-261031-0001)...');
+        setTimeout(() => {
+          showToast('Downloaded: PLMun_ConfirmationSlip_261031.pdf');
+        }, 1200);
+      });
+    }
+
+    // Interactive selection for date/time chips inside modal
+    const dateButtons = document.querySelectorAll('.date-slot-pill');
+    dateButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        dateButtons.forEach(b => {
+          b.className = 'date-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-colors';
+        });
+        btn.className = 'date-slot-pill p-space-sm rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm';
+      });
+    });
+
+    const timeButtons = document.querySelectorAll('.time-slot-pill');
+    timeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        timeButtons.forEach(b => {
+          b.className = 'time-slot-pill p-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm transition-colors';
+        });
+        btn.className = 'time-slot-pill p-space-sm rounded-lg bg-primary text-on-primary font-label-sm text-label-sm shadow-sm font-semibold';
+      });
+    });
+  })();
+</script></div></main><footer class="w-full bg-surface-container-low text-on-surface-variant mt-space-xl shadow-[0_-1px_8px_rgba(0,0,0,0.02)]"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-4 gap-gutter"><div class="md:col-span-2 flex flex-col gap-space-sm"><div class="flex items-center gap-space-md"><img alt="PLMun Crest" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZnRLTkqDyuJIUNwlTS9MReDjxHjKfho4XJ9AnC6ixPbJRv1s0CXhB09tCQDQJ7DN24FVdLGJCWl4Ra2PWnouZiwy5r5wpQN9jJ8UizNm8PYr1H053VOGaaH-5bedgm52lX-j6o9U-mvlpe0n8wjHPMtEakrazUffa6xMLYAfXVqvyjWjKGJ60TslV_WzKl64MhBzuDtwEP3h2mdYxKDIKKWXAOwYJBxj-kovoKzmj"/><span class="font-title-md text-title-md text-primary font-bold">Pamantasan ng Lungsod ng Muntinlupa</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">Official Document Request and Appointment Scheduling Portal. Office of the University Registrar, Ground Floor, Main Academic Building, University Heights, Poblacion, Muntinlupa City, Philippines.</p><div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm mt-space-xs"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">mail</span>registrar@plmun.edu.ph</span><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[16px]">call</span>(02) 8862-3860</span></div></div><div><h4 class="font-title-md text-title-md text-on-surface font-semibold mb-space-sm">University Services</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li><a class="hover:text-primary transition-colors" href="#">Transcript of Records (TOR)</a></li><li><a class="hover:text-primary transition-colors" href="#">Certificate of Grades (COG)</a></li><li><a class="hover:text-primary transition-colors" href="#">Diploma Re-issuance</a></li><li><a class="hover:text-primary transition-colors" href="#">Honorable Dismissal</a></li><li><a class="hover:text-primary transition-colors" href="#">Certificate of Enrollment (COE)</a></li></ul></div><div><h4 class="font-title-md text-title-md text-on-surface font-semibold mb-space-sm">Hotlines & Privacy</h4><ul class="space-y-space-xs font-body-sm text-body-sm"><li><span class="font-label-sm text-on-surface font-medium">Registrar Hotline:</span> (02) 8862-3860 loc. 214</li><li><span class="font-label-sm text-on-surface font-medium">Student Helpdesk:</span> support@plmun.edu.ph</li><li><a class="hover:text-primary transition-colors" href="#">Data Privacy Statement</a></li><li><a class="hover:text-primary transition-colors" href="#">Document Release Guidelines</a></li><li><a class="hover:text-primary transition-colors" href="#">Citizen's Charter Compliance</a></li></ul></div></div><div class="mt-space-lg pt-space-md text-center font-label-sm text-label-sm text-outline">Â© 2025 Pamantasan ng Lungsod ng Muntinlupa (PLMun). All Rights Reserved. Registrar Academic Information System.</div></div></footer></body></html>

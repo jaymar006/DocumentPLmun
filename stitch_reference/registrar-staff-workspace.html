@@ -1,0 +1,906 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-highest":"#dae2fd","secondary-fixed-dim":"#ffb77d","status-processing":"#2563EB","surface-dim":"#d2d9f4","primary-fixed-dim":"#95d4ac","surface-container":"#eaedff","on-secondary":"#ffffff","on-background":"#131b2e","on-primary-container":"#84c39b","secondary-container":"#fe932c","surface-container-lowest":"#ffffff","outline":"#707971","on-primary":"#ffffff","on-primary-fixed-variant":"#0f5132","gold-light":"#FEFDF0","on-error":"#ffffff","on-secondary-container":"#663500","primary-fixed":"#b0f1c7","surface-container-high":"#e2e7ff","on-secondary-fixed-variant":"#6e3900","primary":"#003820","surface-canvas":"#F8FAFC","on-tertiary":"#ffffff","inverse-primary":"#95d4ac","inverse-on-surface":"#eef0ff","surface-card":"#FFFFFF","error":"#ba1a1a","tertiary-fixed":"#98f5cf","surface-tint":"#2d6a48","on-error-container":"#93000a","outline-variant":"#c0c9c0","surface-variant":"#dae2fd","tertiary":"#003828","secondary":"#904d00","tertiary-fixed-dim":"#7cd8b4","status-approved":"#059669","on-tertiary-fixed":"#002116","gold-muted":"#F6EFE5","background":"#faf8ff","on-surface-variant":"#404942","on-primary-fixed":"#002111","on-secondary-fixed":"#2f1500","status-rejected":"#DC2626","error-container":"#ffdad6","surface-container-low":"#f2f3ff","on-tertiary-fixed-variant":"#00513b","surface":"#faf8ff","on-surface":"#131b2e","status-pending":"#F59E0B","primary-container":"#0f5132","on-tertiary-container":"#6ac6a3","inverse-surface":"#283044","surface-bright":"#faf8ff","secondary-fixed":"#ffdcc3","tertiary-container":"#00513b","border-subtle":"#E2E8F0"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin":"2rem","space-sm":"0.5rem","space-xl":"2rem","gutter":"1.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-md":"1rem","margin-mobile":"1rem","space-lg":"1.5rem"},fontFamily:{"label-sm":["Hanken Grotesk"],"badge-caps":["Hanken Grotesk"],"headline-lg-mobile":["Hanken Grotesk"],"headline-md":["Hanken Grotesk"],"headline-lg":["Hanken Grotesk"],"label-md":["Hanken Grotesk"],"display-hero":["Hanken Grotesk"],"body-sm":["Hanken Grotesk"],"body-md":["Hanken Grotesk"],"body-lg":["Hanken Grotesk"],"headline-sm":["Hanken Grotesk"],"title-md":["Hanken Grotesk"]},fontSize:{"label-sm":["12px",{lineHeight:"16px",fontWeight:"500"}],"badge-caps":["11px",{lineHeight:"14px",letterSpacing:"0.05em",fontWeight:"700"}],"headline-lg-mobile":["26px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"600"}],"headline-lg":["32px",{lineHeight:"40px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["14px",{lineHeight:"20px",fontWeight:"500"}],"display-hero":["40px",{lineHeight:"48px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["13px",{lineHeight:"18px",fontWeight:"400"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}],"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"title-md":["16px",{lineHeight:"24px",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="p-space-lg flex items-center gap-space-sm"><img alt="PLMun University Crest Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZnRLTkqDyuJIUNwlTS9MReDjxHjKfho4XJ9AnC6ixPbJRv1s0CXhB09tCQDQJ7DN24FVdLGJCWl4Ra2PWnouZiwy5r5wpQN9jJ8UizNm8PYr1H053VOGaaH-5bedgm52lX-j6o9U-mvlpe0n8wjHPMtEakrazUffa6xMLYAfXVqvyjWjKGJ60TslV_WzKl64MhBzuDtwEP3h2mdYxKDIKKWXAOwYJBxj-kovoKzmj"/><div class="flex flex-col"><span class="font-title-md text-title-md text-primary font-bold leading-tight">PLMun Portal</span><span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Registrar Operations</span></div></div><div class="px-space-md mb-space-sm"><span class="font-badge-caps text-badge-caps text-outline uppercase px-space-sm">Role Navigation</span></div><nav class="px-space-sm flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-all bg-primary-container text-on-primary font-semibold rounded-lg" data-path="staff-claim-desk" href="#"><span class="material-symbols-outlined text-[20px]">verified</span>Staff Claim Desk</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="admin-analytics" href="#"><span class="material-symbols-outlined text-[20px]">analytics</span>Admin & Analytics</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="student-portal" href="#"><span class="material-symbols-outlined text-[20px]">folder_shared</span>Student Portal</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="request-wizard" href="#"><span class="material-symbols-outlined text-[20px]">post_add</span>Request Wizard</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="landing-page" href="#"><span class="material-symbols-outlined text-[20px]">public</span>Public Landing</a></nav></div><div class="p-space-md bg-surface-container/60 rounded-xl m-space-sm"><div class="flex items-center gap-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATCLgu-1beHHZtdaidS4eOq05WtuCR7aAX8XAzV4y6iyGrLir5jaU7GsTuQ47tunO8tSSmtT4aXVP0KtU6GT3puNC2s7uWkMUwewkgXyRArgrb1LXcO0veM0q63mh4H4huAu3byNq-Ba-6dXoxi0qnVqcr4Qx3ZLa6JrC4nlzKPxCEStulfxDWGP7Z90G5CmDtqk4ZFP0hpesGoV5JQZfvQOfU03stnIj9FWga6Iue"/><div class="flex flex-col"><span class="font-label-sm text-label-sm font-semibold text-on-surface leading-tight">Registrar Staff</span><span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">Window 3 Officer</span></div></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 z-40 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="bg-primary text-on-primary py-space-xs px-margin text-center font-label-sm text-label-sm flex items-center justify-center gap-space-sm"><span class="material-symbols-outlined text-[16px]">schedule</span><span>Registrar office hours: Monâ€“Fri, 8:00 AM â€“ 4:00 PM | University Registrar Office: Ground Floor, Main Academic Building</span></div><div class="h-20 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="PLMun University Crest Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZnRLTkqDyuJIUNwlTS9MReDjxHjKfho4XJ9AnC6ixPbJRv1s0CXhB09tCQDQJ7DN24FVdLGJCWl4Ra2PWnouZiwy5r5wpQN9jJ8UizNm8PYr1H053VOGaaH-5bedgm52lX-j6o9U-mvlpe0n8wjHPMtEakrazUffa6xMLYAfXVqvyjWjKGJ60TslV_WzKl64MhBzuDtwEP3h2mdYxKDIKKWXAOwYJBxj-kovoKzmj"/><span class="font-title-md text-title-md text-primary font-bold">PLMun Registrar Workspace</span></div><div class="flex items-center gap-space-md"><nav class="flex items-center gap-space-sm" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a aria-current="page" class="px-space-md py-space-sm transition-colors bg-primary-container text-on-primary font-semibold rounded-lg" data-path="staff-claim-desk" href="#">Staff Claim Desk</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="admin-analytics" href="#">Admin Settings & Analytics</a><a class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" data-path="student-portal" href="#">Student View</a></nav><div class="flex items-center pl-space-sm"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATCLgu-1beHHZtdaidS4eOq05WtuCR7aAX8XAzV4y6iyGrLir5jaU7GsTuQ47tunO8tSSmtT4aXVP0KtU6GT3puNC2s7uWkMUwewkgXyRArgrb1LXcO0veM0q63mh4H4huAu3byNq-Ba-6dXoxi0qnVqcr4Qx3ZLa6JrC4nlzKPxCEStulfxDWGP7Z90G5CmDtqk4ZFP0hpesGoV5JQZfvQOfU03stnIj9FWga6Iue"/></div></div></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="w-full max-w-[1440px] mx-auto p-space-lg"><div class="flex flex-col w-full">
+<!-- Staff Operations Dashboard Banner & Meta Bar -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="font-badge-caps text-badge-caps uppercase px-space-sm py-0.5 rounded-full bg-primary/10 text-primary">Office of the University Registrar</span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-status-approved"></span>
+<span class="font-label-sm text-label-sm text-status-approved font-semibold">Live Dispatch Desk</span>
+</div>
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Counter Window 03</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium">(Credentials & Official Transcripts)</span>
+</div>
+</div>
+</div>
+<!-- Active Terminal Context & Synchronized Clock -->
+<div class="flex items-center gap-space-md self-start lg:self-auto bg-surface-container-low px-space-md py-space-sm rounded-xl shadow-sm">
+<div class="flex flex-col items-start lg:items-end">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface" id="current-date-display">Thursday, October 24, 2024</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-[15px]">schedule</span>
+<span class="font-label-sm text-label-sm font-medium tracking-tight" id="live-clock">10:42:18 AM PHT</span>
+</div>
+</div>
+<div class="w-px h-8 bg-surface-container-highest"></div>
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-9 h-9 rounded-full object-cover shadow-sm" data-alt="Official identification photograph of university staff officer in formal barong tagalog with professional studio lighting on neutral institutional backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQRoWZwC9VocQNaCiWO9I0xnbmdIpdOZtW-WXpd7-OuvuepcmPvJAs8ye_RvfRLmpi5LF1qoPbRueiaeI9pc1zxnBWwtNv751ogwtzd5s0ZhfV4I4J6VTc1v8Mh9PZUEhA8IISQW_LxybCufr8DBH7ELWduQeHEnxXI7H4EPT-aGUaCaSaI03_8J3paG1D4Z1lUzPo9RJFtlGUi7gEn7ya0F-pu8umxDLsCZ2qh54f"/>
+<span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-status-approved ring-2 ring-surface-container-low"></span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface leading-tight">Maria Elena Santos</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Badge #PLM-EMP-4089</span>
+</div>
+</div>
+</div>
+</section>
+<!-- KPI Metric Overview Cards Grid -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md mb-space-xl">
+<!-- Stat 1: Pending Review -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Pending Review</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">pending_actions</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-hero text-display-hero text-on-surface font-extrabold leading-none">14</span>
+<span class="font-badge-caps text-badge-caps text-secondary font-bold bg-gold-muted px-2 py-0.5 rounded-full">Requires Sign-off</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<!-- Stat 2: In Processing / Printing -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">In Queue / Printing</span>
+<span class="p-1.5 rounded-lg bg-surface-container text-status-processing">
+<span class="material-symbols-outlined text-[18px]">print</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-hero text-display-hero text-status-processing font-extrabold leading-none">28</span>
+<span class="font-badge-caps text-badge-caps text-status-processing bg-surface-container px-2 py-0.5 rounded-full font-bold">Press Active</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-status-processing h-full rounded-full" style="width: 56%"></div>
+</div>
+</div>
+<!-- Stat 3: Ready for Pickup Today -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-primary-container text-on-primary shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-primary-container font-medium">Ready For Pickup</span>
+<span class="p-1.5 rounded-lg bg-primary/40 text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">package_2</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-hero text-display-hero font-extrabold leading-none text-on-primary">32</span>
+<span class="font-badge-caps text-badge-caps text-primary-fixed bg-primary px-2 py-0.5 rounded-full font-bold">12 Slots Due</span>
+</div>
+<div class="w-full bg-primary h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-primary-fixed h-full rounded-full" style="width: 64%"></div>
+</div>
+</div>
+<!-- Stat 4: Claimed Today -->
+<div class="flex flex-col justify-between p-space-md rounded-xl bg-surface-card shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Claimed Today</span>
+<span class="p-1.5 rounded-lg bg-surface-container-low text-status-approved">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-hero text-display-hero text-status-approved font-extrabold leading-none">45</span>
+<span class="font-badge-caps text-badge-caps text-status-approved bg-surface-container-low px-2 py-0.5 rounded-full font-bold">+18% vs avg</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-status-approved h-full rounded-full" style="width: 82%"></div>
+</div>
+</div>
+<!-- Stat 5: Missed / No-Show (Alert state) -->
+<div class="col-span-2 md:col-span-1 flex flex-col justify-between p-space-md rounded-xl bg-error-container/40 text-on-surface shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-sm text-label-sm text-status-rejected font-bold">Missed / No-Show</span>
+<span class="p-1.5 rounded-lg bg-error-container text-status-rejected">
+<span class="material-symbols-outlined text-[18px]">event_busy</span>
+</span>
+</div>
+<div class="flex items-baseline justify-between">
+<span class="font-display-hero text-display-hero text-status-rejected font-extrabold leading-none">06</span>
+<span class="font-badge-caps text-badge-caps text-status-rejected bg-white/80 px-2 py-0.5 rounded-full font-bold">Notice Sent</span>
+</div>
+<div class="w-full bg-error-container h-1.5 rounded-full mt-space-sm overflow-hidden">
+<div class="bg-status-rejected h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+</section>
+<!-- Main Split Layout: Quick Scanner / Verification Terminal & Requests Table -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- LEFT PANEL: Barcode/QR Lookup & Claimant Quick-Draw Desk (5 Cols on XL) -->
+<div class="xl:col-span-5 flex flex-col gap-space-md">
+<!-- Fast Lookup Scanner Card -->
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[20px]">qr_code_scanner</span>
+</span>
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Express Claimant Lookup</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Scan appointment voucher barcode or manual reference</p>
+</div>
+</div>
+<span class="font-badge-caps text-badge-caps px-2 py-1 bg-surface-container rounded-md text-primary font-bold">F2 Quick-Key</span>
+</div>
+<!-- Search Bar Form -->
+<div class="flex items-stretch gap-space-xs mb-space-md">
+<div class="relative flex-grow">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[20px]">search</span>
+<input class="w-full pl-10 pr-4 py-2.5 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest transition-all" id="ref-input" placeholder="e.g. PLM-261031-0001 or scan barcode..." type="text" value="PLM-261031-0001"/>
+</div>
+<button class="px-space-md py-2.5 bg-primary text-on-primary rounded-lg font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors flex items-center gap-1.5 shadow-sm active:scale-95" id="lookup-btn" type="button">
+<span>Verify</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- Active Claimant Dossier Quick-Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md" id="claimant-card">
+<!-- Student Basic Identifier -->
+<div class="flex items-start gap-space-md">
+<div class="relative flex-shrink-0">
+<img class="w-16 h-20 object-cover rounded-lg shadow-sm" data-alt="University student ID portrait photo of a Filipino male student in formal collared shirt with clear neutral background and official university watermark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_6KxEHO68Jl0o0lMvI2QXyoGnXo1CTk7aIqvLF7OotLEg7dIdxz8uONVj1A3zGFZsqlyeU5-WY_81FIpAvs-QzrsU3Cs9YGcVVdg13-YqWjqRcJxGz-B02hyJtIYZE9kAeDoqUvmRmJrMY3Wui1Bu6ODXoFWU6NJLk0G7sIJMBnRssBE3TmsTx6-3bwKwLT-y5LFNz37yWXCIqL4EZ9WcEusJjFVOs56AwECEyp59"/>
+<span class="absolute -bottom-1 -right-1 p-0.5 rounded-full bg-status-approved text-white shadow">
+<span class="material-symbols-outlined text-[14px] block">verified</span>
+</span>
+</div>
+<div class="flex flex-col flex-grow min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate">Joshua M. De Guzman</span>
+<span class="font-badge-caps text-badge-caps px-2 py-0.5 rounded-full bg-status-approved/15 text-status-approved font-bold uppercase">Ready</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Student ID: 2021-04982</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">College of Information Technology & Computer Studies</span>
+<div class="flex items-center gap-space-sm mt-1">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-semibold">BS Information Technology</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary font-semibold">Regular / Non-cleared Dues: â‚±0.00</span>
+</div>
+</div>
+</div>
+<!-- Document Requested Detail Box -->
+<div class="bg-surface-card rounded-lg p-space-sm flex flex-col gap-1.5 shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-[11px] uppercase tracking-wider font-semibold">Document Package</span>
+<span class="font-label-sm text-[11px] font-bold text-primary">Voucher Ref: PLM-261031-0001</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">description</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Official Transcript of Records (OTR)</span>
+</div>
+<span class="font-badge-caps text-badge-caps px-2 py-0.5 bg-surface-container rounded font-bold text-on-surface">2 Copies â€¢ Hard Seal</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant pt-1">
+<span class="font-body-sm text-[12px]">Purpose: Employment Requirement</span>
+<span class="font-body-sm text-[12px] font-semibold text-status-approved">Paid Online: â‚±350.00 (O.R. #90382)</span>
+</div>
+</div>
+<!-- Representative Verification Notice Alert (Amber Gold Accent) -->
+<div class="bg-gold-light rounded-lg p-space-sm flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary flex-shrink-0 mt-0.5">assignment_ind</span>
+<div class="flex flex-col text-on-secondary-container">
+<span class="font-label-sm text-label-sm font-bold text-secondary">Authorized Representative Pick-up</span>
+<p class="font-body-sm text-[12px] leading-relaxed">
+                Claimant: <strong class="font-semibold text-on-surface">Elena S. De Guzman</strong> (Mother). Authorization Letter uploaded with valid SSS ID. Mandatory: Validate physical government photo ID before handing envelope.
+              </p>
+<div class="mt-1 flex items-center gap-space-sm">
+<button class="text-primary font-label-sm text-[11px] font-bold underline hover:text-primary-container flex items-center gap-0.5" type="button">
+<span class="material-symbols-outlined text-[14px]">visibility</span> View Scanned Letter & ID
+                </button>
+</div>
+</div>
+</div>
+<!-- Document Dispatch Actions Toolbar -->
+<div class="flex flex-col gap-space-xs pt-1">
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="w-full py-2.5 px-space-md bg-status-approved hover:bg-status-approved/90 text-white rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" id="btn-claim-action" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Mark as Claimed</span>
+</button>
+<button class="w-full py-2.5 px-space-sm bg-surface-container text-on-surface hover:bg-secondary-container/20 hover:text-secondary rounded-lg font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 transition-all active:scale-95" id="btn-noshow-action" type="button">
+<span class="material-symbols-outlined text-[18px]">person_off</span>
+<span>Mark No-Show</span>
+</button>
+</div>
+<button class="w-full py-2 px-space-sm bg-surface-card hover:bg-error-container text-status-rejected rounded-lg font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-all" id="btn-reject-action" type="button">
+<span class="material-symbols-outlined text-[16px]">cancel</span>
+<span>Reject Request / Require Revision</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Registry Dispatch Log Snippet -->
+<div class="bg-surface-card rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-title-md text-title-md text-on-surface font-bold">Recent Desk Activity</span>
+<span class="font-label-sm text-[12px] text-on-surface-variant">Past 30 mins</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-approved"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Mark Kevin Reyes</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">PLM-261031-0012</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">10:38 AM â€¢ Claimed</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-approved"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Ana Patricia Cruz</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">PLM-261031-0009</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">10:24 AM â€¢ Claimed</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-status-rejected"></span>
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Jerome Bautista</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant font-mono">PLM-261031-0004</span>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">10:02 AM â€¢ No-Show (Auto-SMS Sent)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT PANEL: Full Interactive Requests DataTable & Filtering (7 Cols on XL) -->
+<div class="xl:col-span-7 flex flex-col gap-space-md">
+<div class="bg-surface-card rounded-xl p-space-lg shadow-sm flex flex-col h-full">
+<!-- Table Header & Filter Chips -->
+<div class="flex flex-col gap-space-md mb-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-title-md text-title-md text-on-surface font-bold">Document Requisition Register</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Live appointment queues and registrar validation records</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-[12px] text-on-surface-variant">Showing <strong class="text-on-surface font-bold">6</strong> of 125 today</span>
+<button class="p-1.5 rounded-lg bg-surface-container-low text-on-surface hover:bg-surface-container transition-colors" title="Export Daily Roster" type="button">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</div>
+<!-- Dynamic Filter Chips -->
+<div class="flex items-center gap-1.5 overflow-x-auto pb-1" id="filter-chip-container">
+<button class="filter-chip active px-3 py-1 rounded-full font-badge-caps text-badge-caps bg-primary text-on-primary font-bold shadow-sm whitespace-nowrap" data-filter="all">All Queued</button>
+<button class="filter-chip px-3 py-1 rounded-full font-badge-caps text-badge-caps bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-semibold whitespace-nowrap" data-filter="ready">Today's Pickups (32)</button>
+<button class="filter-chip px-3 py-1 rounded-full font-badge-caps text-badge-caps bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-semibold whitespace-nowrap" data-filter="processing">Processing (28)</button>
+<button class="filter-chip px-3 py-1 rounded-full font-badge-caps text-badge-caps bg-surface-container-low text-on-surface-variant hover:bg-surface-container font-semibold whitespace-nowrap" data-filter="review">Needs Review (14)</button>
+<button class="filter-chip px-3 py-1 rounded-full font-badge-caps text-badge-caps bg-surface-container-low text-status-rejected hover:bg-error-container font-semibold whitespace-nowrap" data-filter="noshow">Missed / No-Show (6)</button>
+</div>
+</div>
+<!-- Requests Data Table -->
+<div class="overflow-x-auto w-full -mx-space-lg px-space-lg flex-grow">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/70 text-outline font-badge-caps text-[11px] uppercase tracking-wider">
+<th class="py-2.5 px-3 rounded-l-lg font-bold">Ref No & Student</th>
+<th class="py-2.5 px-2 font-bold">College</th>
+<th class="py-2.5 px-2 font-bold">Document</th>
+<th class="py-2.5 px-2 font-bold">Appt Slot</th>
+<th class="py-2.5 px-2 font-bold text-center">Rep</th>
+<th class="py-2.5 px-2 font-bold">Status</th>
+<th class="py-2.5 px-3 rounded-r-lg font-bold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-[13px] text-on-surface" id="requests-tbody">
+<!-- Record 1 (Active claimant matching lookup) -->
+<tr class="bg-primary/5 hover:bg-primary/10 transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-mono font-bold text-primary">PLM-261031-0001</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Joshua M. De Guzman</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: 2021-04982</span>
+</div>
+</td>
+<td class="py-3 px-2">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container font-bold text-on-surface">CCIT</span>
+</td>
+<td class="py-3 px-2 max-w-[130px]">
+<span class="font-label-sm text-[12px] font-semibold block truncate">Official Transcript (OTR)</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">2 Official Copies</span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold text-on-surface">10:30 AM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Window 03</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-gold-muted text-secondary font-badge-caps text-[10px] font-bold" title="Mother: Elena S. De Guzman">
+                    YES
+                  </span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-approved/15 text-status-approved font-badge-caps text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-approved"></span>
+                    Ready
+                  </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-status-approved hover:text-white text-status-approved transition-colors" title="Quick Claim Handout">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="View Dossier">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 2 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-mono font-bold text-on-surface-variant">PLM-261031-0002</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Camille Rose Alcantara</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: 2019-10291</span>
+</div>
+</td>
+<td class="py-3 px-2">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container font-bold text-on-surface">CBA</span>
+</td>
+<td class="py-3 px-2 max-w-[130px]">
+<span class="font-label-sm text-[12px] font-semibold block truncate">Diploma Replacement</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">With Board Seal</span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold text-on-surface">11:00 AM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Window 03</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-outline font-badge-caps text-[10px] font-bold">
+                    NO
+                  </span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-approved/15 text-status-approved font-badge-caps text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-approved"></span>
+                    Ready
+                  </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-status-approved hover:text-white text-status-approved transition-colors" title="Quick Claim Handout">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 3 (Processing) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-mono font-bold text-on-surface-variant">PLM-261031-0003</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Christian Dave Flores</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: 2022-00441</span>
+</div>
+</td>
+<td class="py-3 px-2">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container font-bold text-on-surface">CAS</span>
+</td>
+<td class="py-3 px-2 max-w-[130px]">
+<span class="font-label-sm text-[12px] font-semibold block truncate">Certificate of Grades</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Sem 1 2023-2024</span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold text-on-surface">11:30 AM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Window 02</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-outline font-badge-caps text-[10px] font-bold">
+                    NO
+                  </span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-processing/15 text-status-processing font-badge-caps text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-processing"></span>
+                    Printing
+                  </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 4 (Pending Sign-off) -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-mono font-bold text-on-surface-variant">PLM-261031-0005</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Hannah Beatriz Ramos</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: 2020-03819</span>
+</div>
+</td>
+<td class="py-3 px-2">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container font-bold text-on-surface">CTE</span>
+</td>
+<td class="py-3 px-2 max-w-[130px]">
+<span class="font-label-sm text-[12px] font-semibold block truncate">Honorable Dismissal / CAV</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Dean's Signature Req</span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold text-on-surface">01:30 PM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Window 03</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-gold-muted text-secondary font-badge-caps text-[10px] font-bold">
+                    YES
+                  </span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary/15 text-secondary font-badge-caps text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Needs Review
+                  </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Review Clearance Hold">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 5 (No-Show Alert) -->
+<tr class="hover:bg-surface-container-low transition-colors bg-error-container/10">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-mono font-bold text-status-rejected">PLM-261031-0008</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Gabriel Angelo Tan</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: 2018-09228</span>
+</div>
+</td>
+<td class="py-3 px-2">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container font-bold text-on-surface">COE</span>
+</td>
+<td class="py-3 px-2 max-w-[130px]">
+<span class="font-label-sm text-[12px] font-semibold block truncate">Course Description Syl.</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">5 Subject Outlines</span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold text-status-rejected line-through">09:00 AM</span>
+<span class="font-body-sm text-[11px] text-status-rejected">Slot Expired</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-outline font-badge-caps text-[10px] font-bold">
+                    NO
+                  </span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-rejected/15 text-status-rejected font-badge-caps text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-rejected"></span>
+                    Missed Slot
+                  </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors" title="Resend Notification">
+<span class="material-symbols-outlined text-[18px]">forward_to_inbox</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Record 6 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-3 px-3">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-mono font-bold text-on-surface-variant">PLM-261031-0010</span>
+<span class="font-label-md text-label-md font-bold text-on-surface">Jessica Mae Soliman</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">ID: 2021-06112</span>
+</div>
+</td>
+<td class="py-3 px-2">
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container font-bold text-on-surface">CCIT</span>
+</td>
+<td class="py-3 px-2 max-w-[130px]">
+<span class="font-label-sm text-[12px] font-semibold block truncate">Certificate of Enrollment</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">1 Original Copy</span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-label-sm text-[12px] font-bold text-on-surface">02:00 PM</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Window 03</span>
+</div>
+</td>
+<td class="py-3 px-2 text-center">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-outline font-badge-caps text-[10px] font-bold">
+                    NO
+                  </span>
+</td>
+<td class="py-3 px-2 whitespace-nowrap">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-status-approved/15 text-status-approved font-badge-caps text-[11px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-status-approved"></span>
+                    Ready
+                  </span>
+</td>
+<td class="py-3 px-3 text-right whitespace-nowrap">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1 rounded hover:bg-status-approved hover:text-white text-status-approved transition-colors">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination & Footer Status -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md border-t border-surface-container mt-auto">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Page 1 of 21 (Filtered by Window 03 & Connected Registers)</span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors disabled:opacity-40" disabled="">Previous</button>
+<span class="px-2 py-1 bg-primary text-on-primary font-label-sm text-label-sm rounded font-bold">1</span>
+<button class="px-2 py-1 hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded transition-colors">2</button>
+<button class="px-2 py-1 hover:bg-surface-container text-on-surface font-label-sm text-label-sm rounded transition-colors">3</button>
+<span class="text-on-surface-variant px-1">...</span>
+<button class="px-space-sm py-1 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors">Next</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: Daily Appointment Slot Schedule & Capacity Grid -->
+<section class="bg-surface-card rounded-xl p-space-lg shadow-sm mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="p-2.5 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[24px]">calendar_view_day</span>
+</span>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Window 03 Appointment Slot & Capacity Grid</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">30-minute block intervals for in-person release â€¢ Standard allocation: 5 students per window slot</p>
+</div>
+</div>
+<!-- Window Slot Legend -->
+<div class="flex items-center gap-space-md flex-wrap">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-status-approved"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Available (< 4)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Near Capacity (4/5)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-status-rejected"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Fully Booked (5/5)</span>
+</div>
+</div>
+</div>
+<!-- Morning Session (8:00 AM - 12:00 PM) -->
+<div class="mb-space-lg">
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">wb_sunny</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Morning Session (8:00 AM â€“ 12:00 PM)</span>
+<span class="font-badge-caps text-badge-caps px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-bold">8 Slots Available</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-space-md">
+<!-- Slot 8:00 AM - Complete / Past -->
+<div class="p-space-sm rounded-lg bg-surface-container-low opacity-75 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">08:00 â€“ 08:30 AM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-outline font-bold">Elapsed</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">5/5 Attended: K. Cruz, L. Ocampo, +3</div>
+</div>
+<!-- Slot 8:30 AM - Complete / Past -->
+<div class="p-space-sm rounded-lg bg-surface-container-low opacity-75 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">08:30 â€“ 09:00 AM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-outline font-bold">Elapsed</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">4/5 Attended: M. Dizon, R. Garcia, +2</div>
+</div>
+<!-- Slot 9:00 AM - Past with Missed -->
+<div class="p-space-sm rounded-lg bg-error-container/20 flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-status-rejected">09:00 â€“ 09:30 AM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-rejected text-white font-bold">1 No-Show</span>
+</div>
+<div class="text-[12px] font-body-sm text-status-rejected truncate font-medium">G. Tan (Missed), +4 Claimed</div>
+</div>
+<!-- Slot 9:30 AM -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">09:30 â€“ 10:00 AM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant font-bold">5/5 Full</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">All 5 released on time</div>
+</div>
+<!-- Slot 10:00 AM -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">10:00 â€“ 10:30 AM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-approved/20 text-status-approved font-bold">Completed</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">A. Cruz, M. Reyes, +3 done</div>
+</div>
+<!-- Slot 10:30 AM (CURRENT ACTIVE SLOT) -->
+<div class="p-space-sm rounded-lg bg-primary-container text-on-primary shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="absolute -right-4 -bottom-4 w-12 h-12 bg-white/10 rounded-full pointer-events-none"></div>
+<div class="flex items-center justify-between mb-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-status-approved animate-pulse"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-primary">10:30 â€“ 11:00 AM</span>
+</div>
+<span class="font-badge-caps text-[10px] px-2 py-0.5 rounded bg-primary text-primary-fixed font-bold uppercase">Now Serving</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-primary-container">
+<strong class="text-white font-bold">J. De Guzman (In Desk)</strong>, J. Perez, R. David, K. Yap, C. Lim
+          </div>
+</div>
+<!-- Slot 11:00 AM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">11:00 â€“ 11:30 AM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-rejected/15 text-status-rejected font-bold">5/5 Full</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">C. Alcantara, D. Santos, +3 queued</div>
+</div>
+<!-- Slot 11:30 AM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">11:30 â€“ 12:00 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-approved/15 text-status-approved font-bold">3/5 Booked</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">C. Flores, T. Gomez, S. Soriano</div>
+</div>
+</div>
+</div>
+<!-- Afternoon Session (1:00 PM - 4:00 PM) -->
+<div>
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="material-symbols-outlined text-[18px] text-primary">routine</span>
+<span class="font-title-md text-title-md font-bold text-on-surface">Afternoon Session (1:00 PM â€“ 4:00 PM)</span>
+<span class="font-badge-caps text-badge-caps px-2 py-0.5 rounded bg-surface-container-low text-on-surface font-bold">6 Slots Remaining</span>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-md">
+<!-- Slot 1:00 PM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">01:00 â€“ 01:30 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-rejected/15 text-status-rejected font-bold">5/5 Full</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">M. Sy, F. Laurel, E. Ramos +2</div>
+</div>
+<!-- Slot 1:30 PM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">01:30 â€“ 02:00 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-secondary/15 text-secondary font-bold">4/5 Booked</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">H. Ramos, P. Mercado, +2</div>
+</div>
+<!-- Slot 2:00 PM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">02:00 â€“ 02:30 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-approved/15 text-status-approved font-bold">2/5 Booked</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">J. Soliman, A. Balagtas</div>
+</div>
+<!-- Slot 2:30 PM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">02:30 â€“ 03:00 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-approved/15 text-status-approved font-bold">1/5 Booked</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">R. Villanueva (4 Open)</div>
+</div>
+<!-- Slot 3:00 PM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">03:00 â€“ 03:30 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-approved/15 text-status-approved font-bold">3/5 Booked</span>
+</div>
+<div class="text-[12px] font-body-sm text-on-surface-variant truncate">L. Tolentino, G. Magno, +1</div>
+</div>
+<!-- Slot 3:30 PM -->
+<div class="p-space-sm rounded-lg bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">03:30 â€“ 04:00 PM</span>
+<span class="font-badge-caps text-[10px] px-1.5 py-0.5 rounded bg-status-approved/15 text-status-approved font-bold">0/5 Open</span>
+</div>
+<div class="text-[12px] font-body-sm text-status-approved truncate font-medium">Walk-in Buffer / 5 Open</div>
+</div>
+</div>
+</div>
+</section>
+<!-- MODAL: Mandatory Rejection / Deficiency Notice Dialog (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-on-background/40 backdrop-blur-sm flex items-center justify-center p-space-md hidden" id="reject-modal">
+<div class="bg-surface-card max-w-lg w-full rounded-2xl p-space-lg shadow-2xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="p-2 rounded-lg bg-error-container text-status-rejected">
+<span class="material-symbols-outlined text-[22px]">assignment_late</span>
+</span>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface font-bold">Issue Deficiency / Rejection Notice</h3>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Student: Joshua M. De Guzman (PLM-261031-0001)</span>
+</div>
+</div>
+<button class="p-1 rounded-lg text-outline hover:text-on-surface hover:bg-surface-container-low" id="modal-close-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Primary Discrepancy Reason</label>
+<select class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:bg-surface-container-lowest">
+<option>Representative Authorization Missing or Invalid Government ID</option>
+<option>Outstanding Departmental Clearance Obligation (Library / Dean)</option>
+<option>Payment Verification Mismatch / Non-reconciled O.R.</option>
+<option>Damaged or Incomplete Official Dry-Seal on Document Package</option>
+<option>Student Academic Record Withheld by University Legal Office</option>
+<option>Other Institutional Discrepancy</option>
+</select>
+</div>
+<div class="flex flex-col gap-space-sm">
+<label class="font-label-sm text-label-sm font-semibold text-on-surface-variant">Actionable Instructions for Student</label>
+<textarea class="w-full px-3 py-2 bg-surface-container-low rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest" placeholder="State specific instructions that will be emailed and texted via SMS to the student..." rows="3"></textarea>
+</div>
+<div class="bg-gold-light p-space-sm rounded-lg flex items-center gap-2 text-secondary text-[12px]">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span>A notification will be immediately dispatched to the student's registered PLMun email.</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="px-space-md py-2 bg-surface-container-low text-on-surface rounded-lg font-label-md text-label-md font-semibold hover:bg-surface-container" id="modal-cancel-btn" type="button">Cancel</button>
+<button class="px-space-md py-2 bg-status-rejected text-white rounded-lg font-label-md text-label-md font-bold hover:bg-status-rejected/90 shadow-sm" id="modal-submit-reject" type="button">Confirm Rejection</button>
+</div>
+</div>
+</div>
+<!-- TOAST NOTIFICATION COMPONENT -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg bg-primary text-on-primary" id="toast-notification">
+<span class="material-symbols-outlined text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-label-md text-label-md font-semibold" id="toast-message">Action processed successfully</span>
+</div>
+<!-- In-Screen Terminal Micro-Interactions Script -->
+<script>
+    (function initStaffWorkspace() {
+      // Live Clock
+      function updateClock() {
+        const now = new Date();
+        const clockEl = document.getElementById('live-clock');
+        if (clockEl) {
+          clockEl.textContent = now.toLocaleTimeString('en-US', { hour12: true }) + ' PHT';
+        }
+      }
+      setInterval(updateClock, 1000);
+      updateClock();
+
+      // Toast Display Helper
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      const toastIcon = document.getElementById('toast-icon');
+
+      function showToast(text, type = 'success') {
+        if (!toast) return;
+        toastMsg.textContent = text;
+        if (type === 'error') {
+          toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg bg-status-rejected text-white';
+          toastIcon.textContent = 'error';
+        } else if (type === 'warning') {
+          toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg bg-secondary text-white';
+          toastIcon.textContent = 'warning';
+        } else {
+          toast.className = 'fixed bottom-6 right-6 z-50 transform translate-y-0 opacity-100 transition-all duration-300 pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-xl shadow-lg bg-status-approved text-white';
+          toastIcon.textContent = 'check_circle';
+        }
+
+        setTimeout(() => {
+          toast.classList.add('translate-y-20', 'opacity-0');
+        }, 3200);
+      }
+
+      // Rejection Modal Wiring
+      const rejectBtn = document.getElementById('btn-reject-action');
+      const rejectModal = document.getElementById('reject-modal');
+      const modalClose = document.getElementById('modal-close-btn');
+      const modalCancel = document.getElementById('modal-cancel-btn');
+      const modalSubmit = document.getElementById('modal-submit-reject');
+
+      if (rejectBtn && rejectModal) {
+        rejectBtn.addEventListener('click', () => rejectModal.classList.remove('hidden'));
+        modalClose?.addEventListener('click', () => rejectModal.classList.add('hidden'));
+        modalCancel?.addEventListener('click', () => rejectModal.classList.add('hidden'));
+        modalSubmit?.addEventListener('click', () => {
+          rejectModal.classList.add('hidden');
+          showToast('Deficiency notification and rescheduling link issued to student.', 'warning');
+        });
+      }
+
+      // Claim Action
+      const claimBtn = document.getElementById('btn-claim-action');
+      if (claimBtn) {
+        claimBtn.addEventListener('click', () => {
+          claimBtn.disabled = true;
+          claimBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Envelope Released';
+          claimBtn.classList.remove('bg-status-approved');
+          claimBtn.classList.add('bg-primary-container', 'text-on-primary-container');
+          showToast('Document marked as CLAIMED. Official receipt recorded in University Registrar registry.');
+        });
+      }
+
+      // No-Show Action
+      const noShowBtn = document.getElementById('btn-noshow-action');
+      if (noShowBtn) {
+        noShowBtn.addEventListener('click', () => {
+          showToast('Marked as NO-SHOW. Automated reminder SMS & reschedule voucher sent.', 'error');
+        });
+      }
+
+      // Filter Chips Interaction
+      const filterChips = document.querySelectorAll('.filter-chip');
+      filterChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          filterChips.forEach(c => {
+            c.classList.remove('active', 'bg-primary', 'text-on-primary');
+            c.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+          });
+          chip.classList.add('active', 'bg-primary', 'text-on-primary');
+          chip.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+          showToast('Filtered register view: ' + chip.textContent.trim());
+        });
+      });
+
+      // Quick Lookup verification
+      const lookupBtn = document.getElementById('lookup-btn');
+      const refInput = document.getElementById('ref-input');
+      if (lookupBtn && refInput) {
+        lookupBtn.addEventListener('click', () => {
+          const val = refInput.value.trim();
+          if (val) {
+            showToast('Loaded active dossier for ' + val);
+          }
+        });
+      }
+    })();
+  </script>
+</div></div></main></div></body></html>
