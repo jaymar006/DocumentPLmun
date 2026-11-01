@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { StoreProvider } from "@/lib/store";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { AuthModal } from "@/components/auth/AuthModal";
 
 const fontSans = Albert_Sans({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
             <Navbar />
             <main className="flex-1">{children}</main>
             <Footer />
+            <AuthModal />
           </StoreProvider>
         </ThemeProvider>
       </body>

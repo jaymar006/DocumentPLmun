@@ -32,7 +32,7 @@ function RequestWizardContent() {
   const searchParams = useSearchParams();
   const preselectedDocId = searchParams.get("doc");
 
-  const { currentStudent, addRequest, catalog, userRole, authenticateUser } = useStore();
+  const { currentStudent, addRequest, catalog, userRole, authenticateUser, openAuthModal } = useStore();
 
   // Wizard Phase: 1, 2, 3, 4, 5 (Success)
   const [currentPhase, setCurrentPhase] = useState<1 | 2 | 3 | 4 | 5>(1);
@@ -182,12 +182,13 @@ function RequestWizardContent() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-2.5 justify-center pt-2">
-            <Link href="/#login-card">
-              <Button className="w-full sm:w-auto">
-                Go to Login
-                <ArrowRight className="w-4 h-4 ml-1.5" />
-              </Button>
-            </Link>
+            <Button
+              className="w-full sm:w-auto"
+              onClick={() => openAuthModal("/request")}
+            >
+              Sign In to Account
+              <ArrowRight className="w-4 h-4 ml-1.5" />
+            </Button>
             <Button
               variant="outline"
               onClick={() => authenticateUser("2021-04981")}

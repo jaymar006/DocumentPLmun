@@ -26,6 +26,7 @@ export default function StudentPortalPage() {
     rescheduleRequest,
     userRole,
     authenticateUser,
+    openAuthModal,
   } = useStore();
 
   const [activeReqId, setActiveReqId] = useState<string>(
@@ -88,11 +89,12 @@ export default function StudentPortalPage() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-2.5 justify-center pt-2">
-            <Link href="/#login-card">
-              <Button className="w-full sm:w-auto">
-                Go to Login
-              </Button>
-            </Link>
+            <Button
+              className="w-full sm:w-auto"
+              onClick={() => openAuthModal("/portal")}
+            >
+              Sign In to Account
+            </Button>
             <Button
               variant="outline"
               onClick={() => authenticateUser("2021-04981")}

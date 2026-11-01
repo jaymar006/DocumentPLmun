@@ -50,6 +50,11 @@ interface StoreContextType {
     program: string;
   };
   setCurrentStudent: (student: { id: string; name: string; email: string; program: string }) => void;
+  isAuthModalOpen: boolean;
+  setIsAuthModalOpen: (open: boolean) => void;
+  authModalRedirectUrl: string;
+  setAuthModalRedirectUrl: (url: string) => void;
+  openAuthModal: (redirectUrl?: string) => void;
 }
 
 const StoreContext = createContext<StoreContextType | null>(null);
@@ -76,6 +81,13 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
     email: "maria.santos@plmun.edu.ph",
     program: "BS Information Technology (BSIT)",
   });
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
+  const [authModalRedirectUrl, setAuthModalRedirectUrl] = useState<string>("/request");
+
+  const openAuthModal = (redirectUrl: string = "/request") => {
+    setAuthModalRedirectUrl(redirectUrl);
+    setIsAuthModalOpen(true);
+  };
 
   useEffect(() => {
     try {
@@ -406,6 +418,11 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
         logoutUser,
         currentStudent,
         setCurrentStudent,
+        isAuthModalOpen,
+        setIsAuthModalOpen,
+        authModalRedirectUrl,
+        setAuthModalRedirectUrl,
+        openAuthModal,
       }}
     >
       {children}

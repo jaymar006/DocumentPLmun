@@ -42,6 +42,7 @@ export function Navbar() {
     requests,
     userRole,
     logoutUser,
+    openAuthModal,
   } = useStore();
   const { theme, setTheme } = useTheme();
 
@@ -440,12 +441,15 @@ export function Navbar() {
                     )}
                   </div>
                 ) : (
-                  <Link href="/#login-card">
-                    <Button size="sm" variant="outline" className="h-9 text-xs font-semibold">
-                      <LogIn className="w-3.5 h-3.5 mr-1.5 text-primary" />
-                      Sign In
-                    </Button>
-                  </Link>
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    onClick={() => openAuthModal()}
+                    className="h-9 text-xs font-semibold cursor-pointer"
+                  >
+                    <LogIn className="w-3.5 h-3.5 mr-1.5 text-primary" />
+                    Sign In
+                  </Button>
                 )}
               </div>
             </div>
