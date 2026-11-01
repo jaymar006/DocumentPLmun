@@ -148,14 +148,7 @@ export function Navbar() {
     },
   ];
 
-  const guestNavItems: NavItem[] = [
-    {
-      name: "Home",
-      href: "/",
-      icon: Home,
-      description: "Document Catalog & Account Sign-In",
-    },
-  ];
+  const guestNavItems: NavItem[] = [];
 
   const navItems =
     userRole === "ADMIN"
@@ -244,51 +237,59 @@ export function Navbar() {
 
             {/* Right: Navigation Links + shadcn Profile Avatar Dropdown */}
             <div className="flex items-center space-x-2">
-              <nav className="flex items-center space-x-1">
-                {navItems.map((item) => {
-                  const isActive =
-                    item.href === "/"
-                      ? pathname === "/"
-                      : pathname.startsWith(item.href);
-                  const Icon = item.icon;
+              {navItems.length > 0 && (
+                <nav className="flex items-center space-x-1">
+                  {navItems.map((item) => {
+                    const isActive =
+                      item.href === "/"
+                        ? pathname === "/"
+                        : pathname.startsWith(item.href);
+                    const Icon = item.icon;
 
-                  return (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className={cn(
-                        "flex items-center space-x-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 relative",
-                        isActive
-                          ? "bg-primary text-primary-foreground shadow-2xs font-semibold"
-                          : "text-muted-foreground hover:bg-secondary hover:text-secondary-foreground"
-                      )}
-                    >
-                      <Icon
+                    return (
+                      <Link
+                        key={item.href}
+                        href={item.href}
                         className={cn(
-                          "w-4 h-4 shrink-0",
-                          isActive ? "text-primary-foreground" : "text-primary"
+                          "flex items-center space-x-2 px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 relative",
+                          isActive
+                            ? "bg-primary text-primary-foreground shadow-2xs font-semibold"
+                            : "text-muted-foreground hover:bg-secondary hover:text-secondary-foreground"
                         )}
-                      />
-                      <span className="hidden md:inline">{item.name}</span>
-                      {item.badge && (
-                        <span
+                      >
+                        <Icon
                           className={cn(
-                            "ml-1 px-1.5 py-0.5 text-[10px] font-bold rounded-full border",
-                            isActive
-                              ? "bg-background text-foreground border-border"
-                              : "bg-primary/20 text-foreground border-primary/30"
+                            "w-4 h-4 shrink-0",
+                            isActive ? "text-primary-foreground" : "text-primary"
                           )}
-                        >
-                          {item.badge}
-                        </span>
-                      )}
-                    </Link>
-                  );
-                })}
-              </nav>
+                        />
+                        <span className="hidden md:inline">{item.name}</span>
+                        {item.badge && (
+                          <span
+                            className={cn(
+                              "ml-1 px-1.5 py-0.5 text-[10px] font-bold rounded-full border",
+                              isActive
+                                ? "bg-background text-foreground border-border"
+                                : "bg-primary/20 text-foreground border-primary/30"
+                            )}
+                          >
+                            {item.badge}
+                          </span>
+                        )}
+                      </Link>
+                    );
+                  })}
+                </nav>
+              )}
 
               {/* Theme Toggle + Profile Avatar Dropdown Trigger (or Sign In when logged out) */}
-              <div className="flex items-center space-x-2 border-l border-border pl-3 ml-1" ref={dropdownRef}>
+              <div
+                className={cn(
+                  "flex items-center space-x-2",
+                  navItems.length > 0 && "border-l border-border pl-3 ml-1"
+                )}
+                ref={dropdownRef}
+              >
                 <ThemeToggle />
                 {userRole ? (
                   <div className="relative">
